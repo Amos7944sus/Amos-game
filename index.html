@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>MC1.20.x Mekanism 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main>
+    <h1>MC1.20.x Mekanismの手引き1</h1>
+    <h2>はじめに</h2>
+    <p>Minecraft 1.20.xでMekanismをやるときはとても難しいと思うでしょう。でも、それぞれ紐解くと簡単なので、解説していきます。</p>
+    <h2>目次</h2>
+    <p><a href="#0">0.注意と前提解説とおすすめmod紹介</a><br>
+        <a href="#1">1.主要な追加ブロック・鉱石</a><br>
+        <a href="#2">2.Mekanism始動</a><br>
+        <a href="#3">3.初めての加工機械</a><br>
+        <a href="#4">4.工業の時代へ…</a><br>
+        <a href="#5">5.電力安定を目指して</a></p>
+        <a href="☆">さいごに</a>
+    <h2 id="0">0.注意と前提解説とおすすめmod紹介</h2>
+    <h2 class="headline">○modは基本4つ入れる</h2>
+    <p>Mekanism modというのはMekanism単体を入れればいいのではありません。<br>
+        Mekanism本体はただのコア、いわば心臓部ってだけで、これだけでは何にも面白くありません。<br>
+        これを肉付けする3つのmodがこれらです。</p>
+        <p class="boldtext">☆Mekanism Generators</p>
+        <p>Mekanismの電力を生み出すための、発電機となるブロックを追加するmodです。<br>
+        電力がなければMekanism機械は動かないので、実質このmodがないとMekanismはできないので絶対入れましょう。</p>
+        <p class="boldtext">☆Mekanism Tools</p>
+        <p>Mekanismの鉱石やインゴットで作れる防具やツールを追加するmodです。<br>
+        正直これはMekanismやるだけならいらないけど、あったほうがツールの選択肢やバリエーションが増えて圧倒的に楽しいので入れましょう。</p>
+        <p class="boldtext">☆Mekanism Additions</p>
+        <p>Mekanismの追加素材や機能を追加するmodです。<br>
+        これも正直Mekanismやるだけならいらないけど、あったほうが建築の選択肢や使い道があまりない素材を有効活用できることがあるので入れましょう。</p>
+    <h2 class="headline">○よく出るものの解説</h2>
+    <p>この手引きでのよく出るものを書いておきます。いちいち書くのが面倒だったのです。<br>
+    <img src="img/machines_gui_template.png" alt="たいていの機械のGUI" class="images"><br>
+    ①は側面にあるブロックとの関係の設定ができるボタンです。様々な設定ができます。<br>
+    ②は搬入の設定ができるボタンです。精密な設定ができます。<br>
+    ③は機械に入っているエネルギーの量を示すゲージです。その量は機械の種類やグレードに応じて変わります。<br>
+    ④はエネルギータブレットにエネルギーを入れたり出したりできる場所です。加工機械ならふつうエネルギーを入れる場所、発電機ならふつう充電する場所です。<br>
+    ⑤は機械の電力に関する情報を表示する場所です。クリックで単位を変えられて、加工機械と発電機で見れる情報が変わります。<br>
+    ⑥はボタンはレッドストーン制御に関するもので、<br>
+    無視の場合はレッドストーン信号の影響を受けず、通常だとレッドストーン信号を与えると動き、反転だと逆にレッドストーン信号を止めると動きます。<br>
+    ⑦はアップグレードに関するボタンで、ここからアップグレードパーツを入れられます。<br>
+    ⑧は機械をロックするためのボタンで、マルチプレイするときに役立ちます。</p>
+    <h2 class="headline">○これは必須じゃないけど、入れたほうがいいmodたち</h2>
+    <p class="boldtext">・Just Enough Items(通称JEI)</p>
+    <p>これはMinecraftにあるクラフトを色々な機能で補助するためのmodです。<br>
+    これがあるとMekanismの複雑なクラフトがめちゃくちゃ簡単になるので、入れるのをお勧めします。</p>
+    <p class="boldtext">・Ore Excavaton</p>
+    <p>Ore Excavatonは、様々なものに対応する一括破壊modです。<br>
+    ただ一括で破壊するだけでなく、掘り抜く形を切り替えることもできます。<br>
+    Mekanismはバニラ鉱石、追加鉱石の両方が大量に必要なので、ブランチマイニングのためにも入れるのをお勧めします。</p>
+    <p class="boldtext">・Jade</p>
+    <p>Jadeは、ブロックやモブの情報を表示するためのmodです。<br>
+    バニラのかまどなど、使えるブロックに入ってる物やその数、そして加工の進捗だけでなく、<br>
+    Mekanismの機械の中にある電気や入っているものとその量、加工の進捗が見れるので入れるのをお勧めします。</p>
+    <details>
+        <summary>ほぼチートmod(バランス崩壊するかもだからあんまおすすめしない)(クリックして開く)</summary>
+        <p>これらのmodはゲームバランスを崩す可能性があるため、使用する際は注意が必要です。</p>
+        <p class="boldtext">・Advanced XRay</p>
+        <p>Advanced XRayは、事前に設定したブロックを表示することができるmodで、いわゆるX-Rayです。<br>
+        これがあると、どんな鉱石やブロックも簡単に見つけられます。だけどそれだと逆に簡単すぎるため、私はお勧めしません。</p>
+        <p class="boldtext">Torcherino</p>
+        <p>Torcherinoは、事前に設定した範囲のTick速度を早くするmodです。<br>
+        これがあると、農作物の成長や加工速度の上昇、発電速度の上昇が可能になります。だけど超バランスブレイカーなので私はお勧めしません。</p>
+    </details>
+    <h2 id="1">1.主要な追加ブロック・鉱石</h2>
+    <p>Mekanismでは新種の鉱石が数種類追加されます。</p>
+<div class="oreboxes">
+    <img src="img/ores/tin.png" alt="錫鉱石" class="ores">
+    <img src="img/ores/dtin.png" alt="深層錫鉱石" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○錫鉱石</p>
+        <p>Mekanismで追加されるy=60以下に生成される鉱石です。<br>
+        正直そんな使うとこはないので、見かけたら取っておくくらいでOKです。<br>
+        石以上のツールで採掘可能です。</p>
+    </div>
+</div>
+<div class="oreboxes">
+    <img src="img/ores/osmium.png" alt="オスミウム鉱石" class="ores">
+    <img src="img/ores/dosmium.png" alt="深層オスミウム鉱石" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○オスミウム鉱石</p>
+        <p>Mekanismで追加されるy=60以下に生成される鉱石です。<br>
+        重要で、よくつかうので見かけたら取っておきましょう。<br>
+        石以上のツールで採掘可能です。</p>
+    </div>
+</div>
+<div class="oreboxes">
+    <img src="img/ores/uranium.png" alt="ウラン鉱石" class="ores">
+    <img src="img/ores/duranium.png" alt="深層ウラン鉱石" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○ウラン鉱石</p>
+        <p>Mekanismで追加される鉱石です。核分裂燃料の素材になります。<br>
+        最後のほうでめっちゃ使うので見かけたら取っておきましょう。<br>
+        石以上のツールで採掘可能です。</p>
+    </div>
+</div>
+<div class="oreboxes">
+    <img src="img/ores/fluorite.png" alt="蛍石鉱石" class="ores">
+    <img src="img/ores/dfluorite.png" alt="深層蛍石鉱石" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○蛍石鉱石</p>
+        <p>Mekanismで追加される鉱石です。ウランと同じく核分裂燃料の素材になります。<br>
+        1つのブロックからラピスラズリやレッドストーンのように複数の鉱石が取れます。見かけたら取っておきましょう。<br>
+        石以上のツールで採掘可能です。</p>
+    </div>
+</div>
+<div class="oreboxes">
+    <img src="img/ores/lead.png" alt="鉛鉱石" class="ores">
+    <img src="img/ores/dlead.png" alt="深層鉛鉱石" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○鉛鉱石</p>
+        <p>Mekanismで追加される鉱石です。エンドコンテンツの時に使います。<br>
+        これもエンドコンテンツで大量に使うことになるので、見かけたら取っておきましょう。<br>
+        石以上のツールで採掘可能です。</p>
+    </div>
+</div>
+<div class="oreboxes">
+    <img src="img/ores/salt.png" alt="塩ブロック" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○塩ブロック</p>
+        <p>Mekanismで追加されるブロックです。水辺に生成されて壊すと塩をドロップします。<br>
+        割とマジでどこにでもあるので、気が向いたら取りに行くくらいでOKです。<br>
+        関係ないことですが、TohuCraftReload modの塩と互換性があります。<br>
+        素手以上で採掘可能です。</p>
+    </div>
+</div>
+        <details>
+            <summary>余談</summary>
+<div class="oreboxes">
+    <img src="img/ores/copper.png" alt="銅鉱石" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○銅鉱石</p>
+        <p>Mekanismで追加されていた鉱石ですが、バニラの銅鉱石と統合されました。
+        石以上のツールで採掘可能でした。<br></p>
+    </div>
+</div>
+        </details>
+    <h2 id="2">2.Mekanism始動</h2>
+    <p>ワールド作ってかまどとかいろいろ作るまでは基本バニラとは変わりません。<br>
+    石のツルハシとかまどを作り終わったら、地下を掘りましょう。Mekanismではバニラと変わらず地中に鉱石が生成されます。<br>
+    優先的に取るべきなのは石炭(なければ木炭でもOK)、鉄、銅、オスミウムです。<br>
+    満足いくまで集め終わったら、いつも通り鉄を焼いて、オスミウムも焼きましょう。<br>
+    この時点で、実績「はじめの一歩」が取れます。<br>
+    <img src="img/advancements/the_first_step.png" alt="はじめの一歩" class="images"><br>
+    それらの素材をこの画像の通りにクラフトすることで、初めての手ごろな発電機「熱発電機」が完成します。<br>
+    <img src="img/craft_recipes/machines_recipe/heat_generator_recipe.png" alt="熱発電機" class="images">
+<div class="oreboxes">
+    <img src="img/machines/heat_generators/heat_generator_1.png" alt="熱発電機の見た目1" class="ores">
+    <img src="img/machines/heat_generators/heat_generator_2.png" alt="熱発電機の見た目2" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○熱発電機</p>
+        <p>熱発電機は、簡単な素材で序盤から作れる発電機です。<br>
+        壊してもブロック化しますし、中身のものや電力は保持されます。序盤の発電機としてはかなり有能ですが、発電効率に対するコスパが悪いので中盤を超えるとあまり使われなくなります。</p>
+        <details>
+        <summary>使い方1</summary>
+        <p><img src="img/machines/heat_generators/heat_generator_3.png" alt="熱発電機のGUI" class="images"><br>
+        ①の場所に溶岩バケツなどのかまどで燃料になるアイテム・ブロックを入れることで②のゲージに溶岩が表示され、その溶岩が一定以上の量になったら発電し始めます。発電した電気は電気ケーブルで取り出せます。<br>
+        ①の場所には溶岩タンクを直入れしても問題はありません。液体パイプを使って外部から燃料を供給してもOKです。</p>
+    </details>
+    <details>
+        <summary>使い方2</summary>
+        <img src="img/machines/heat_generators/heat_generator_4.png" alt="熱発電機のGUI" class="images"><br>
+        右の形のように、熱発電機のパイプなどを通せる面を除いた周り+熱発電機内に溶岩源を置くことでも発電できます。<br>
+        どうやら熱発電機ブロックには重ねて溶岩を入れられるみたいです。<br>
+        でも個人的には左の形のような方法が一番いいと思っています。</p>
+    </details>
+    </div>
+</div>
+<h2 id="3">3.初めての加工機械</h2>
+<p>発電機ができたら次は加工機械を作りましょう。<br>
+鉄4つ、レッドストーン2つ、かまど2つ、オスミウム1つを集めて、この画像の通りに作業台でクラフトすることで、初めての加工機械「冶金吹込機」が完成します。<br>
+<img src="img/craft_recipes/machines_recipe/metallurgical_blowing_machine_recipe.png" alt="冶金吹込機" class="images">
+<div class="oreboxes">
+    <img src="img/machines/metallurgical_blowing_machines/metallurgical_blowing_machine_1.png" alt="冶金吹込機の見た目1" class="ores">
+    <img src="img/machines/metallurgical_blowing_machines/metallurgical_blowing_machine_2.png" alt="冶金吹込機の見た目2" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○冶金吹込機</p>
+        <p>冶金吹込機は、最序盤から作れる加工機械です。<br>
+        壊してもブロック化しますし、中身のものや電力は保持されます。<br>
+        最序盤で作れる割にMekanism最重要で、この機械がないと数々の中間素材がすべて作れなくなるので絶対に作りましょう。</p>
+        <details>
+        <summary>使い方</summary>
+        <p><img src="img/machines/metallurgical_blowing_machines/metallurgical_blowing_machine_3.png" alt="冶金吹込機のGUI" class="images"><br>
+        ①の場所に指定された吹込む素材を入れることで②のゲージに吹込む素材が表示され、その状態で指定された物を④の場所に置くことで加工が始まります。加工が終わると⑤に加工品が表示されます。<br>
+        ③のボタンを押すと吹込む素材がすべて排出されてしまうため、注意が必要です。<br>
+    </details>
+    </div>
+</div>
+<p>これは電力を必要とするので、さっき作った熱発電機と接続しましょう。ケーブルがないうちは熱発電機に直接おいてOKですが、熱発電機のいかにもケーブルが取り付けられそうな面に置く必要があります。<br>
+<h2 id="4">4.工業の時代へ…</h2>
+<p>冶金吹込機ができたら、次は工業の時代へと入っていきます。<br>
+それに行く過程で必須なのは鋼鉄インゴットなので、今から作っていきましょう。<br>
+鉄と石炭(木炭でもOK)を満足するまで集めましょう。<br>
+集め終わったら、冶金吹込機で石炭1つを鉄に吹込むことで濃縮鉄ができます。<br>
+<img src="img/craft_recipes/items_recipe/concentrated_iron_recipe.png" alt="濃縮鉄" class="images"><br>
+<div class="oreboxes">
+    <img src="img/items/concentrated_iron.png" alt="濃縮鉄" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○濃縮鉄</p>
+        <p>濃縮鉄は、冶金吹込機で作れる中間素材です。<br>
+        これは鋼鉄インゴットでないので、反応炉窓を作るでもないならさっさと冶金吹込機で加工しましょう。<br>
+        終盤に中間素材として使うだけで、今は鋼鉄インゴットの中間素材でしかありません。</p>
+    </div>
+</div>
+このままでは鋼鉄インゴットにはならないので、この濃縮鉄にさらに石炭1つを吹き込むことで鋼鉄の粉ができます。<br>
+<img src="img/craft_recipes/items_recipe/steel_powder_recipe.png" alt="鋼鉄の粉" class="images"><br>
+<div class="oreboxes">
+    <img src="img/items/steel_powder.png" alt="鋼鉄の粉" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○鋼鉄の粉</p>
+        <p>鋼鉄の粉は、主に冶金吹込機で作れる中間素材です。<br>
+        これも鋼鉄インゴットでないので、消音アップグレードを作るでもないならさっさとかまどで焼いてしまいましょう。<br>
+        粉砕機で鋼鉄インゴットを粉砕することでも作れます。</p>
+    </div>
+</div>
+それをかまどで焼くことで鋼鉄ができます。<br>
+<div class="oreboxes">
+    <img src="img/items/steel_ingot.png" alt="鋼鉄インゴット" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○鋼鉄インゴット</p>
+        <p>鋼鉄インゴットは、かまどで作れる中間素材です。<br>
+        Mekanismで最重要の素材であり、多くの機械を作る中間素材になりますし、Mekanism Toolsで追加される装備の素材としても使えます。
+        それに伴って結構量がいるので、こまめに作っておきましょう。</p>
+    </div>
+</div>
+<p>鋼鉄を作るための累計素材量は石炭2つ、鉄1つです。<br>
+他の中間素材も作っておきましょう。
+鉄とレッドストーンを満足するまで集めましょう。
+集め終わったら、冶金吹込機でレッドストーン1つを鉄に吹込むことで吹込合金ができます。<br>
+<img src="img/craft_recipes/items_recipe/blowing_alloy_recipe.png" alt="吹込合金" class="images"></p>
+<div class="oreboxes">
+    <img src="img/items/blowing_alloy.png" alt="吹込合金" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○吹込合金</p>
+        <p>吹込合金は、冶金吹込機で作れる中間素材です。<br>
+        Mekanismで重要な素材であり、多くの機械を作る中間素材になりますし、機械だけじゃなくMekanismで追加されたツールや装備、アップグレードパーツ、<br>
+        またほかのアイテムの中間素材などその用途は多岐にわたります。
+        それに伴って結構量がいるので、こまめに作っておきましょう。</p>
+    </div>
+</div>
+<p>また、オスミウムとレッドストーンを満足するまで集めましょう。<br>
+集め終わったら、冶金吹込機でレッドストーン2つをオスミウムに吹込むことで基本制御回路ができます。<br>
+<img src="img/craft_recipes/items_recipe/basic_control_circuit_recipe.png" alt="基本制御回路" class="images"></p>
+<div class="oreboxes">
+    <img src="img/items/basic_control_circuit.png" alt="基本制御回路" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○基本制御回路</p>
+        <p>基本制御回路は、冶金吹込機で作れる中間素材です。<br>
+        これもMekanismで重要な素材であり、多くの機械を作る中間素材になりますし、機械だけじゃなくMekanismで追加されたツールや装備、アップグレードパーツ、<br>
+        またほかのアイテムの中間素材などその用途は多岐にわたります。
+        それに伴って結構量がいるので、こまめに作っておきましょう。</p>
+    </div>
+</div>
+<p>電力を届けるケーブルを作っていきましょう。<br>
+鋼鉄インゴットとレッドストーンを満足するまで集めましょう。<br>
+集め終わったら、作業台で鋼鉄インゴット2つとレッドストーン1つをこの画像の通りにクラフトすることで、基本ユニバーサルケーブルができます。<br>
+基本ユニバーサルケーブルを作るための累計素材量は鋼、細かくして石炭4つ、鉄2つ、レッドストーン1つです。<br>
+<img src="img/craft_recipes/machines_recipe/basic_universal_cable_recipe.png" alt="基本ユニバーサルケーブル" class="images"></p>
+<div class="oreboxes">
+    <img src="img/machines/cables/basic_universal_cable_1.png" alt="基本ユニバーサルケーブルの見た目" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○基本ユニバーサルケーブル</p>
+        <p>基本ユニバーサルケーブルは、作業台で作れる中間素材です。<br>
+        Mekanismで重要なケーブルで、発電機から加工機械へ電力を送るために使われます。<br>
+        それに伴って結構量がいるので、こまめに作っておきましょう。</p>
+        <details>
+            <summary>使い方</summary>
+            <img src="img/machines/cables/basic_universal_cable_2.png" alt="基本ユニバーサルケーブル" class="images"><br>
+            発電機のいかにもケーブルが取り付けられそうな面に置くことで、発電機から加工機械へ電力を送ることができます。何個も繋げたら遠くまで電力が届きますし、複数の機械を一度に動かせます。<br>
+            どうやら溶岩の中においても使えるようです。
+        </details>
+    </div>
+</div>
+<h2 id="5">5.電力安定を目指して</h2>
+<p>工業の時代で電力不足は常に付きまとうものです。なので、これからを見据えて次は電力安定を目指していきましょう。<br>
+今回使うのはさっきの熱発電機でなく、風力発電機です。そちらのほうが発電効率に対するコスパが格段に良く、終盤まで利用できます。<br>
+その前に、風力発電機を作るための中間素材を作りましょう。<br>
+金とレッドストーンと吹込合金を満足するまで集めましょう。<br>
+集め終わったら、作業台で金インゴット3つとレッドストーン4つと吹込合金2つをこの画像の通りにクラフトすることで、エネルギータブレットができます。<br>
+エネルギータブレットを作るための累計素材量は、細かくしてレッドストーン6つ、金インゴット3つ、鉄インゴット2つです。<br>
+<img src="img/craft_recipes/items_recipe/energy_tablets_recipe.png" alt="エネルギータブレットのレシピ" class="images"></p>
+<div class="oreboxes">
+    <img src="img/items/energy_tablets/energy_tablets_1.png" alt="エネルギータブレットの見た目1" class="ores">
+    <img src="img/items/energy_tablets/energy_tablets_2.png" alt="エネルギータブレットの見た目2" class="ores">
+    <div class="mainboxes">
+        <p class="boldtext">○エネルギータブレット</p>
+        <p>エネルギータブレットは、作業台で作れるアイテムです。<br>
+        このアイテムの中に電力をためて加工機械に流すこともできますが、今回は風力発電機の中間素材として使います。</p>
+        <details>
+            <summary>使い方</summary>
+            <img src="img/items/energy_tablets/energy_tablets_3.png" alt="エネルギータブレットの使い方1" class="images"><br>
+            <img src="img/items/energy_tablets/energy_tablets_4.png" alt="エネルギータブレットの使い方2" class="images"><br>
+            発電機GUIの④の場所にエネルギータブレットを置くことで、発電機からエネルギータブレットに電力をためることができます。<br>
+            そして、加工機械GUIの④の場所にエネルギータブレットを置くことで、エネルギータブレットから加工機械に電力を流すことができます。<br>
+        </details>
+    </div>
+</div>
+<p>次に、本題である風力発電機を作ります。
+オスミウムとエネルギータブレットと基本制御回路と吹込合金を満足するまで集めましょう。<br>
+集め終わったら、作業台でオスミウムインゴット3つとエネルギータブレット1つと基本制御回路1つと吹込合金2つをこの画像の通りにクラフトすることで、<br>
+主力級発電機の風力発電機ができます。<br>
+風力発電機を作るための累計素材量は、細かくしてレッドストーン13つ、金インゴット6つ、オスミウム4つ、鉄インゴット1つです。<br>
+<img src="img/craft_recipes/machines_recipe/wind_turbine_recipe.png" alt="風力発電機のレシピ" class="images"><br>
+<div class="oreboxes">
+    <img src="img/machines/wind_turbines/wind_turbine_1.png" alt="風力発電機の見た目1" class="windturbines">
+    <img src="img/machines/wind_turbines/wind_turbine_2.png" alt="風力発電機の見た目2" class="windturbines">
+    <div class="mainboxes">
+        <p class="boldtext">○風力発電機</p>
+        <p>風力発電機は、作業台で作れる機械です。<br>
+        この機械はノーリソースで電力を発生させ、加工機械に電力を供給します。序盤から終盤まで使える優秀な発電機です。</p>
+        <details>
+            <summary>使い方</summary>
+            普通に置いているだけで発電するので、ケーブルを使って発電した電力を送りましょう。<br>
+            高度が高ければ高いほど発電効率が上がるという仕様なので、できるだけ高い場所に設置しましょう。個人的にはy=300あたりに置いておくのがベストだと思っています。<br>
+        </details>
+    </div>
+</div>
+<p>これを10台くらい作れば、これから作る鉱石倍化装置を作っても問題ない電力量が生まれるので、中盤までの電力不足は解消されたといってもいいでしょう。</p>
+<h2 id="☆">さいごに</h2>
+<p>これでMC1.20.xのMekanismの手引き1は終わりです。<br>
+これを読んでMekanismを始める人、Mekanismを楽しめる人が少しでも増えたら嬉しいです。<br>
+次回は、精製黒曜石までの道のりと基本的な機械、鉱石2倍化、3倍化装置、Mekanismのツール・装備たちを解説します。<br>
+次回もよろしくお願いします。</p>
+<details>
+    <summary>使用AIと余談</summary>
+    <p>使用AI:<br>
+        ・ChatGPT<br>
+        ・Copilot<br>
+        ・GoogleAI<br>
+    余談:これが初めてのHTMLとCSSだから変かも<br>
+    製作期間:5日(04/04-04/08)</p>
+</details>
+        </main>
+</body>
+</html>
