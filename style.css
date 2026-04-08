@@ -1,0 +1,70 @@
+body {
+    background-color: #e9e9e9; 
+    color: #333333; 
+    padding: 30px;           
+    line-height: 1.8;
+    font-family: sans-serif;
+   
+}
+
+h1 {
+    color: #ff0000; 
+    border-bottom: 2px solid #000000; 
+}
+
+h2 {
+    color: #ff4400; 
+    border-bottom: 2px solid #000000; 
+}
+
+p {
+    font-size: 18px;
+    color: #000000;
+}
+
+.headline {
+    color: #000000;
+    border-bottom: none;
+}
+/*普通の見出し*/
+.boldtext {
+    color: #000000;
+    font-weight: bold;
+}
+/*強調小見出し*/
+.oreboxes {
+    display: flex;          
+    gap: 15px;              
+    background: #fff;       
+    padding: 15px;          
+    border-radius: 10px;    
+    margin: 20px 0;         
+    border: 1px solid #ccc; 
+    flex-wrap: wrap;
+}
+/*鉱石・ブロックdiv用*/
+.ores {
+    width: 135px;        
+    height: 135px;       
+    object-fit: cover;  
+    border-radius: 8px;     
+}
+/*鉱石・ブロック画像用*/
+.images {
+    width: 25%;        
+    height: auto;
+    border-radius: 8px;     
+}
+/*その他の画像用*/
+.windturbines {
+    width: auto;        
+    height: 275px;
+    border-radius: 8px;     
+}
+/*風力発電機画像専用*/
+.mainboxes {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+/*div内テキスト用*/
