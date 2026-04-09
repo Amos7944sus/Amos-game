@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja">    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,58 +7,115 @@
     <title>MC1.20.x Mekanism 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-    <main>
-    <h1>MC1.20.x Mekanismの手引き1</h1>
-    <h2>はじめに</h2>
-    <p>Minecraft 1.20.xでMekanismをやるときはとても難しいと思うでしょう。でも、それぞれ紐解くと簡単なので、解説していきます。</p>
-    <h2>目次</h2>
+<main>
+<section id="最初">
+<h1>MC1.20.x Mekanismの手引き1</h1>
+<h2>はじめに</h2>
+<p>Minecraft 1.20.xでMekanismをやるときはとても難しいと思うでしょう。でも、それぞれ紐解くと簡単なので、解説していきます。</p>
+<h2>目次</h2>
     <p><a href="#0">0.注意と前提解説とおすすめmod紹介</a><br>
-        <a href="#1">1.主要な追加ブロック・鉱石</a><br>
-        <a href="#2">2.Mekanism始動</a><br>
-        <a href="#3">3.初めての加工機械</a><br>
-        <a href="#4">4.工業の時代へ…</a><br>
-        <a href="#5">5.電力安定を目指して</a></p>
-        <a href="#☆">さいごに</a>
-    <h2 id="0">0.注意と前提解説とおすすめmod紹介</h2>
-    <h2 class="headline">○modは基本4つ入れる</h2>
-    <p>Mekanism modというのはMekanism単体を入れればいいのではありません。<br>
-        Mekanism本体はただのコア、いわば心臓部ってだけで、これだけでは何にも面白くありません。<br>
-        これを肉付けする3つのmodがこれらです。</p>
+    <a href="#1">1.主要な追加ブロック・鉱石</a><br>
+    <a href="#2">2.Mekanism始動</a><br>
+    <a href="#3">3.初めての加工機械</a><br>
+    <a href="#4">4.工業の時代へ…</a><br>
+    <a href="#5">5.電力安定を目指して</a>
+    <a href="#☆">さいごに</a></p>
+</section>
+<h2 id="0">0.注意と前提解説とおすすめmod紹介</h2>
+<section id="mekanismmods">
+<h2 class="headline">○modは基本4つ入れる</h2>
+<div class="modboxes">
+    <img src="img/mods_icon/mekanism.png" alt="Mekanism modのアイコン">
+    <div class="mainboxes">
+        <p class="boldtext">★Mekanism</p>
+        <p>Mekanism ModはまずMekanism本体がないと始まりません。まずこれを入れましょう。</p>
+    </div>
+</div>
+<p>Mekanism modというのはMekanism単体を入れればいいのではありません。<br>
+Mekanism本体はただのコア、いわば心臓部ってだけで、これだけでは何にも面白くありません。<br>
+これを肉付けする3つのmodがこれらです。</p>
+<div class="modboxes">
+    <img src="img/mods_icon/mekanism.png" alt="Mekanism modのアイコン">
+    <div class="mainboxes">
         <p class="boldtext">☆Mekanism Generators</p>
         <p>Mekanismの電力を生み出すための、発電機となるブロックを追加するmodです。<br>
         電力がなければMekanism機械は動かないので、実質このmodがないとMekanismはできないので絶対入れましょう。</p>
+    </div>
+</div>
+<div class="modboxes">
+    <img src="img/mods_icon/mekanism.png" alt="Mekanism modのアイコン">
+    <div class="mainboxes">
         <p class="boldtext">☆Mekanism Tools</p>
-        <p>Mekanismの鉱石やインゴットで作れる防具やツールを追加するmodです。<br>
+        <p>Mekanismの鉱石やインゴットで作れる防具やツールmodです。<br>
         正直これはMekanismやるだけならいらないけど、あったほうがツールの選択肢やバリエーションが増えて圧倒的に楽しいので入れましょう。</p>
+    </div>
+</div>
+<div class="modboxes">
+    <img src="img/mods_icon/mekanism.png" alt="Mekanism modのアイコン">
+    <div class="mainboxes">
         <p class="boldtext">☆Mekanism Additions</p>
         <p>Mekanismの追加素材や機能を追加するmodです。<br>
         これも正直Mekanismやるだけならいらないけど、あったほうが建築の選択肢や使い道があまりない素材を有効活用できることがあるので入れましょう。</p>
-    <h2 class="headline">○これは必須じゃないけど、入れたほうがいいmodたち</h2>
-    <p class="boldtext">・Just Enough Items(通称JEI)</p>
-    <p>これはMinecraftにあるクラフトを色々な機能で補助するためのmodです。<br>
-    これがあるとMekanismの複雑なクラフトがめちゃくちゃ簡単になるので、入れるのをお勧めします。</p>
-    <p class="boldtext">・Ore Excavaton</p>
-    <p>Ore Excavatonは、様々なものに対応する一括破壊modです。<br>
-    ただ一括で破壊するだけでなく、掘り抜く形を切り替えることもできます。<br>
-    Mekanismはバニラ鉱石、追加鉱石の両方が大量に必要なので、ブランチマイニングのためにも入れるのをお勧めします。</p>
-    <p class="boldtext">・Jade</p>
-    <p>Jadeは、ブロックやモブの情報を表示するためのmodです。<br>
-    バニラのかまどなど、使えるブロックに入ってる物やその数、そして加工の進捗だけでなく、<br>
-    Mekanismの機械の中にある電気や入っているものとその量、加工の進捗が見れるので入れるのをお勧めします。</p>
-    <details>
-        <summary>ほぼチートmod(バランス崩壊するかもだからあんまおすすめしない)(クリックして開く)</summary>
-        <p>これらのmodはゲームバランスを崩す可能性があるため、使用する際は注意が必要です。</p>
-        <p class="boldtext">・Advanced XRay</p>
-        <p>Advanced XRayは、事前に設定したブロックを表示することができるmodで、いわゆるX-Rayです。<br>
-        これがあると、どんな鉱石やブロックも簡単に見つけられます。だけどそれだと逆に簡単すぎるため、私はお勧めしません。</p>
-        <p class="boldtext">・Torcherino</p>
-        <p>Torcherinoは、事前に設定した範囲のTick速度を早くするmodです。<br>
-        これがあると、農作物の成長や加工速度の上昇、発電速度の上昇が可能になります。だけど超バランスブレイカーなので私はお勧めしません。</p>
-    </details>
-     <h2 class="headline">○よく出るものの解説</h2>
-    <p>この手引きでのよく出るものを書いておきます。いちいち書くのが面倒だったのです。</p>
-    <img src="img/machines_gui_template.png" alt="たいていの機械のGUI" class="images">
+    </div>
+</div>
+</section>
+<h2 class="headline">○これは必須じゃないけど、入れたほうがいいmodたち</h2>
+<section id="othermods">
+<div class="modboxes">
+    <img src="img/mods_icon/just_enough_items.png" alt="JEIのアイコン">
+    <div class="mainboxes">
+        <p class="boldtext">・Just Enough Items(通称JEI)</p>
+        <p>これはMinecraftにあるクラフトを色々な機能で補助するためのmodです。<br>
+        これがあるとMekanismの複雑なクラフトがめちゃくちゃ楽になるので、入れるのをお勧めします。</p>
+    </div>
+</div>
+<div class="modboxes">
+    <img src="img/mods_icon/ore_excavation.png" alt="Ore Excavationのアイコン">
+    <div class="mainboxes">
+        <p class="boldtext">・Ore Excavation</p>
+        <p>Ore Excavationは、様々なものに対応する一括破壊modです。<br>
+        ただ一括で破壊するだけでなく、掘り抜く形を切り替えることもできます。<br>
+        Mekanismはバニラ鉱石、追加鉱石の両方が大量に必要なので、ブランチマイニングのためにも入れるのをお勧めします。</p>    
+    </div>
+</div>
+<div class="modboxes">
+    <img src="img/mods_icon/jade.png" alt="Jadeのアイコン">
+        <div class="mainboxes">
+        <p class="boldtext">・Jade</p>
+        <p>Jadeは、ブロックやモブの情報を表示するためのmodです。<br>
+        バニラのかまどなど、使えるブロックに入ってる物やその数、そして加工の進捗だけでなく、<br>
+        Mekanismの機械の中にある電気や入っているものとその量、加工の進捗が見れるので入れるのをお勧めします。</p>
+    </div>
+</div>
+<details>
+    <summary>ほぼチートmod(バランス崩壊するかもだからあんまおすすめしない)(クリックして開く)</summary>
+    <p>これらのmodはゲームバランスを崩す可能性があるため、使用する際は注意が必要です。</p>    
+    <div class="modboxes">
+        <img src="img/mods_icon/advanced_xray.png" alt="Advanced XRayのアイコン">
+        <div class="mainboxes">
+            <p class="boldtext">・Advanced XRay</p>
+            <p>Advanced XRayは、事前に設定したブロックを表示することができるmodで、いわゆるX-Rayです。<br>
+            これがあると、どんな鉱石やブロックも簡単に見つけられます。だけどそれだと逆に簡単すぎるため、私はお勧めしません。</p>
+        </div>
+    </div>
+    <div class="modboxes">
+        <img src="img/mods_icon/torcherino.png" alt="Torcherinoのアイコン">
+        <div class="mainboxes">
+            <p class="boldtext">・Torcherino</p>
+            <p>Torcherinoは、事前に設定した範囲のTick速度を早くするmodです。<br>
+            これがあると、農作物の成長や加工速度の上昇、発電速度の上昇が可能になります。だけど超バランスブレイカーなので私はお勧めしません。</p>
+        </div>
+    </div>
+</details>
+</section>
+<h2 class="headline">○よく出るものの解説</h2>
+<section id="common">
+<p>この手引きでのよく出るものを書いておきます。いちいち書くのが面倒だったのです。</p>
+<div class="craftboxes">
+<img src="img/machines_gui_template.png" alt="たいていの機械のGUI" class="images">
+    <div class="mainboxes">
     <p>①は側面にあるブロックとの関係の設定ができるボタンです。様々な設定ができます。<br>
     ②は搬入の設定ができるボタンです。精密な設定ができます。<br>
     ③は機械に入っているエネルギーの量を示すゲージです。その量は機械の種類やグレードに応じて変わります。<br>
@@ -68,8 +125,12 @@
     無視の場合はレッドストーン信号の影響を受けず、通常だとレッドストーン信号を与えると動き、反転だと逆にレッドストーン信号を止めると動きます。<br>
     ⑦はアップグレードに関するボタンで、ここからアップグレードパーツを入れられます。<br>
     ⑧は機械をロックするためのボタンで、マルチプレイするときに役立ちます。</p>
-    <h2 id="1">1.主要な追加ブロック・鉱石</h2>
-    <p>Mekanismでは新種の鉱石が数種類追加されます。</p>
+    </div>
+</div>
+</section>
+<h2 id="1">1.主要な追加ブロック・鉱石</h2>
+<section id="ores">
+<p>Mekanismでは新種の鉱石が数種類追加されます。</p>
 <div class="oreboxes">
     <img src="img/ores/tin.png" alt="錫鉱石" class="ores">
     <img src="img/ores/dtin.png" alt="深層錫鉱石" class="ores">
@@ -126,54 +187,73 @@
         <p class="boldtext">○塩ブロック</p>
         <p>Mekanismで追加されるブロックです。水辺に生成されて壊すと塩をドロップします。<br>
         割とマジでどこにでもあるので、気が向いたら取りに行くくらいでOKです。<br>
-        関係ないことですが、TohuCraftReload modの塩と互換性があります。<br>
         素手以上で採掘可能です。</p>
     </div>
 </div>
-        <details>
-            <summary>余談</summary>
-<div class="oreboxes">
-    <img src="img/ores/copper.png" alt="銅鉱石" class="ores">
+<details>
+    <summary>余談</summary>
+    <div class="oreboxes">
+        <img src="img/ores/copper.png" alt="銅鉱石" class="ores">
+        <div class="mainboxes">
+            <p class="boldtext">○銅鉱石</p>
+            <p>Mekanismで追加されていた鉱石ですが、バニラの銅鉱石と統合されました。<br>
+            石以上のツールで採掘可能でした。</p>
+        </div>
+    </div>
+</details>
+</section>
+<h2 id="2">2.Mekanism始動</h2>
+<section id="start">
+    <p>Mekanismはワールド作ってかまどとかいろいろ作るまでは基本バニラとは変わりません。<br>
+    石のツルハシとかまどを作り終わったら、地下を掘りましょう。Mekanismではバニラと変わらず地中に鉱石が生成されます。<br>
+    鉄インゴット、銅インゴット、オスミウムインゴット、木材、かまどを満足いくまで集めましょう。<br>
+    集め終わったら、それらの素材をこの画像の通りにクラフトすることで、初めての手ごろな発電機「熱発電機」が完成します。</p>
+<div class="craftboxes">
+    <img src="img/craft_recipes/machines_recipe/heat_generator_recipe.png" alt="熱発電機" class="images">
     <div class="mainboxes">
-        <p class="boldtext">○銅鉱石</p>
-        <p>Mekanismで追加されていた鉱石ですが、バニラの銅鉱石と統合されました。
-        石以上のツールで採掘可能でした。<br></p>
+        <p>上段全てに鉄インゴット<br>
+        中段左右に木材、中段中央にオスミウムインゴット<br>
+        下段左右に銅インゴット、下段中央にかまど</p>
     </div>
 </div>
-        </details>
-    <h2 id="2">2.Mekanism始動</h2>
-    <p>ワールド作ってかまどとかいろいろ作るまでは基本バニラとは変わりません。<br>
-    石のツルハシとかまどを作り終わったら、地下を掘りましょう。Mekanismではバニラと変わらず地中に鉱石が生成されます。<br>
-    優先的に取るべきなのは石炭(なければ木炭でもOK)、鉄、銅、オスミウムです。<br>
-    満足いくまで集め終わったら、いつも通り鉄を焼いて、オスミウムも焼きましょう。<br>
-    それらの素材をこの画像の通りにクラフトすることで、初めての手ごろな発電機「熱発電機」が完成します。<br>
-    <img src="img/craft_recipes/machines_recipe/heat_generator_recipe.png" alt="熱発電機" class="images">
 <div class="oreboxes">
     <img src="img/machines/heat_generators/heat_generator_1.png" alt="熱発電機の見た目1" class="ores">
     <img src="img/machines/heat_generators/heat_generator_2.png" alt="熱発電機の見た目2" class="ores">
     <div class="mainboxes">
         <p class="boldtext">○熱発電機</p>
         <p>熱発電機は、簡単な素材で序盤から作れる発電機です。<br>
-        壊してもブロック化しますし、中身のものや電力は保持されます。序盤の発電機としてはかなり有能ですが、発電効率に対するコスパが悪いので中盤を超えるとあまり使われなくなります。</p>
-        <details>
-        <summary>使い方1</summary>
+        壊してもブロック化しますし、中身のものや電力は保持されます。<br>
+        序盤の発電機としてはかなり有能ですが、発電効率に対するコスパが悪いので中盤を超えるとあまり使われなくなります。</p>
+    <details>
+    <summary>使い方1</summary>
         <p><img src="img/machines/heat_generators/heat_generator_3.png" alt="熱発電機のGUI" class="images"><br>
-        ①の場所に溶岩バケツなどのかまどで燃料になるアイテム・ブロックを入れることで②のゲージに溶岩が表示され、その溶岩が一定以上の量になったら発電し始めます。発電した電気は電気ケーブルで取り出せます。<br>
+        ①の場所に溶岩バケツなどのかまどで燃料になるアイテム・ブロックを入れることで②のゲージに溶岩が表示され、その溶岩が一定以上の量になったら発電し始めます。<br>
+        発電した電気は電気ケーブルで取り出せます。<br>
         ①の場所には溶岩タンクを直入れしても問題はありません。液体パイプを使って外部から燃料を供給してもOKです。</p>
     </details>
     <details>
-        <summary>使い方2</summary>
-        <img src="img/machines/heat_generators/heat_generator_4.png" alt="熱発電機のGUI" class="images"><br>
+    <summary>使い方2</summary>
+        <p><img src="img/machines/heat_generators/heat_generator_4.png" alt="熱発電機のGUI" class="images"><br>
         右の形のように、熱発電機のパイプなどを通せる面を除いた周り+熱発電機内に溶岩源を置くことでも発電できます。<br>
         どうやら熱発電機ブロックには重ねて溶岩を入れられるみたいです。<br>
         でも個人的には左の形のような方法が一番いいと思っています。</p>
     </details>
     </div>
 </div>
+</section>
 <h2 id="3">3.初めての加工機械</h2>
+<section id="first_machine">
 <p>発電機ができたら次は加工機械を作りましょう。<br>
-鉄4つ、レッドストーン2つ、かまど2つ、オスミウム1つを集めて、この画像の通りに作業台でクラフトすることで、初めての加工機械「冶金吹込機」が完成します。<br>
-<img src="img/craft_recipes/machines_recipe/metallurgical_blowing_machine_recipe.png" alt="冶金吹込機" class="images">
+鉄インゴット、銅インゴット、オスミウムインゴット、木材、かまどを満足いくまで集めましょう。<br>
+それらの素材をこの画像の通りに作業台でクラフトすることで、初めての加工機械「冶金吹込機」が完成します。</p>
+<div class="craftboxes">
+    <img src="img/craft_recipes/machines_recipe/metallurgical_blowing_machine_recipe.png" alt="冶金吹込機" class="images">
+    <div class="mainboxes">
+        <p>上段左右に鉄インゴット、上段中央にかまど<br>
+        中段左右にレッドストーン、中段中央にオスミウムインゴット<br>
+        下段左右に鉄インゴット、下段中央にかまど</p>
+    </div>
+</div>
 <div class="oreboxes">
     <img src="img/machines/metallurgical_blowing_machines/metallurgical_blowing_machine_1.png" alt="冶金吹込機の見た目1" class="ores">
     <img src="img/machines/metallurgical_blowing_machines/metallurgical_blowing_machine_2.png" alt="冶金吹込機の見た目2" class="ores">
@@ -182,22 +262,24 @@
         <p>冶金吹込機は、最序盤から作れる加工機械です。<br>
         壊してもブロック化しますし、中身のものや電力は保持されます。<br>
         最序盤で作れる割にMekanism最重要で、この機械がないと数々の中間素材がすべて作れなくなるので絶対に作りましょう。</p>
-        <details>
+    <details>
         <summary>使い方</summary>
         <p><img src="img/machines/metallurgical_blowing_machines/metallurgical_blowing_machine_3.png" alt="冶金吹込機のGUI" class="images"><br>
         ①の場所に指定された吹込む素材を入れることで②のゲージに吹込む素材が表示され、その状態で指定された物を④の場所に置くことで加工が始まります。加工が終わると⑤に加工品が表示されます。<br>
-        ③のボタンを押すと吹込む素材がすべて排出されてしまうため、注意が必要です。<br>
+        ③のボタンを押すと吹込む素材がすべて排出されてしまうため、注意が必要です。</p>
     </details>
     </div>
 </div>
-<p>これは電力を必要とするので、さっき作った熱発電機と接続しましょう。ケーブルがないうちは熱発電機に直接おいてOKですが、熱発電機のいかにもケーブルが取り付けられそうな面に置く必要があります。<br>
+<p>これを筆頭とした加工機械は電力を必要とするので、発電機と接続しましょう。ケーブルがないうちは発電機に直接おいてOKですが、発電機のいかにもケーブルが取り付けられそうな面に置く必要があります。</p>
+</section>
 <h2 id="4">4.工業の時代へ…</h2>
+<section id="industry">
 <p>冶金吹込機ができたら、次は工業の時代へと入っていきます。<br>
 それに行く過程で必須なのは鋼鉄インゴットなので、今から作っていきましょう。<br>
 鉄と石炭(木炭でもOK)を満足するまで集めましょう。<br>
 集め終わったら、冶金吹込機で石炭1つを鉄に吹込むことで濃縮鉄ができます。<br>
 <img src="img/craft_recipes/items_recipe/concentrated_iron_recipe.png" alt="濃縮鉄" class="images"><br>
-<div class="oreboxes">
+<div class="itemboxes">
     <img src="img/items/concentrated_iron.png" alt="濃縮鉄" class="ores">
     <div class="mainboxes">
         <p class="boldtext">○濃縮鉄</p>
@@ -208,7 +290,7 @@
 </div>
 このままでは鋼鉄インゴットにはならないので、この濃縮鉄にさらに石炭1つを吹き込むことで鋼鉄の粉ができます。<br>
 <img src="img/craft_recipes/items_recipe/steel_powder_recipe.png" alt="鋼鉄の粉" class="images"><br>
-<div class="oreboxes">
+<div class="itemboxes">
     <img src="img/items/steel_powder.png" alt="鋼鉄の粉" class="ores">
     <div class="mainboxes">
         <p class="boldtext">○鋼鉄の粉</p>
@@ -218,7 +300,7 @@
     </div>
 </div>
 それをかまどで焼くことで鋼鉄ができます。<br>
-<div class="oreboxes">
+<div class="itemboxes">
     <img src="img/items/steel_ingot.png" alt="鋼鉄インゴット" class="ores">
     <div class="mainboxes">
         <p class="boldtext">○鋼鉄インゴット</p>
@@ -232,7 +314,7 @@
 鉄とレッドストーンを満足するまで集めましょう。
 集め終わったら、冶金吹込機でレッドストーン1つを鉄に吹込むことで吹込合金ができます。<br>
 <img src="img/craft_recipes/items_recipe/blowing_alloy_recipe.png" alt="吹込合金" class="images"></p>
-<div class="oreboxes">
+<div class="itemboxes">
     <img src="img/items/blowing_alloy.png" alt="吹込合金" class="ores">
     <div class="mainboxes">
         <p class="boldtext">○吹込合金</p>
@@ -245,7 +327,7 @@
 <p>また、オスミウムとレッドストーンを満足するまで集めましょう。<br>
 集め終わったら、冶金吹込機でレッドストーン2つをオスミウムに吹込むことで基本制御回路ができます。<br>
 <img src="img/craft_recipes/items_recipe/basic_control_circuit_recipe.png" alt="基本制御回路" class="images"></p>
-<div class="oreboxes">
+<div class="itemboxes">
     <img src="img/items/basic_control_circuit.png" alt="基本制御回路" class="ores">
     <div class="mainboxes">
         <p class="boldtext">○基本制御回路</p>
@@ -283,7 +365,7 @@
 集め終わったら、作業台で金インゴット3つとレッドストーン4つと吹込合金2つをこの画像の通りにクラフトすることで、エネルギータブレットができます。<br>
 エネルギータブレットを作るための累計素材量は、細かくしてレッドストーン6つ、金インゴット3つ、鉄インゴット2つです。<br>
 <img src="img/craft_recipes/items_recipe/energy_tablets_recipe.png" alt="エネルギータブレットのレシピ" class="images"></p>
-<div class="oreboxes">
+<div class="itemboxes">
     <img src="img/items/energy_tablets/energy_tablets_1.png" alt="エネルギータブレットの見た目1" class="ores">
     <img src="img/items/energy_tablets/energy_tablets_2.png" alt="エネルギータブレットの見た目2" class="ores">
     <div class="mainboxes">
