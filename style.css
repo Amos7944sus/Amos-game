@@ -26,12 +26,12 @@ p {
     color: #000000;
     border-bottom: none;
 }
-/*普通の見出し*/
+
 .boldtext {
     color: #000000;
     font-weight: bold;
 }
-/*強調小見出し*/
+
 .oreboxes {
     display: flex;          
     gap: 15px;              
@@ -42,14 +42,14 @@ p {
     border: 1px solid #ccc; 
     flex-wrap: wrap;
 }
-/*鉱石・ブロックdiv用*/
+
 .ores {
     width: 135px;        
     height: 135px;       
     object-fit: cover;  
     border-radius: 8px;     
 }
-/*鉱石・ブロック画像用*/
+
 .images {
     width: 25%;
     max-width: 300px;
@@ -66,16 +66,20 @@ p {
         height: auto;
     }
 }
-/*その他の画像用*/
+
 .windturbines {
     width: auto;        
     height: 275px;
     border-radius: 8px;     
 }
-/*風力発電機画像専用*/
 .mainboxes {
     display: flex;
     flex-direction: column; 
     justify-content: center;
 }
-/*div内テキスト用*/
+
+p img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
