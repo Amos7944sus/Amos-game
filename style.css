@@ -1,6 +1,6 @@
 body {
-    background-color: #e9e9e9; 
-    color: #333333; 
+    background-color: rgb(233, 233, 233); 
+    color: rgb(51, 51, 51); 
     padding: 30px;           
     line-height: 1.8;
     font-family: sans-serif;
@@ -8,39 +8,92 @@ body {
 }
 
 h1 {
-    color: #ff0000; 
-    border-bottom: 2px solid #000000; 
+    color: rgb(255, 0, 0); 
+    border-bottom: 2px solid rgb(0, 0, 0); 
 }
 
 h2 {
-    color: #ff4400; 
-    border-bottom: 2px solid #000000; 
+    color: rgb(244, 64, 0); 
+    border-bottom: 2px solid rgb(0, 0, 0); 
 }
 
 p {
     font-size: 18px;
-    color: #000000;
+    color: rgb(0, 0, 0);
 }
 
 .headline {
-    color: #000000;
+    color: rgb(0, 0, 0);
     border-bottom: none;
 }
 
 .boldtext {
-    color: #000000;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
-.oreboxes {
-    display: flex;          
-    gap: 15px;              
-    background: #fff;       
-    padding: 15px;          
-    border-radius: 10px;    
-    margin: 20px 0;         
-    border: 1px solid #ccc; 
+
+.modboxes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgb(255,255,255);
+    border-left: 6px solid rgb(255, 0, 0);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
     flex-wrap: wrap;
+}
+
+.craftboxes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgb(255,255,255);
+    border-left: 6px solid rgb(0,0, 255);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.craftboxes img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.craftboxes p {
+    text-align: left;
+}
+
+.oreboxes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgb(255,255,255);
+    border-left: 6px solid rgb(255,217,0);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.itemboxes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgb(255,255,255);
+    border-left: 6px solid rgb(0, 255, 0);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    flex-wrap: wrap; 
+}
+.itemboxes img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .ores {
@@ -83,3 +136,4 @@ p img {
     width: 100%;
     height: auto;
 }
+
