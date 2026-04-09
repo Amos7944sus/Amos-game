@@ -51,9 +51,19 @@ p {
 }
 /*鉱石・ブロック画像用*/
 .images {
-    width: 25%;        
+    width: 25%;
+     max-width: 300px;
     height: auto;
-    border-radius: 8px;     
+    display: block;
+    margin: 0 auto; 
+    border-radius: 8px;
+    
+}
+
+@media (max-width: 600px) {
+    .images {
+        max-width: 100%
+    }
 }
 /*その他の画像用*/
 .windturbines {
